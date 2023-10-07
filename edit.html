@@ -27,33 +27,46 @@
           <h2>목록 추가하기</h2>
           <div class="add">
             <div class="input-text">
-              <label for="name">품명: 사과</label>
+              <label for="name">품명:</label><br/>
+              <input type="text" value = "사과" id="name" required/>
           </div>
           
           <div class="input-text">
-              <label for="price">가격: 10,000</label>
+              <label for="price">가격:</label><br/>
+              <input type="text" value = "10,000" id="price" required/>
           </div>
           
           <div class="input-text">
-              <label for="quantity">수량: 5개</label>
+              <label for="quantity">수량:</label><br/>
+              <input type="text" value = "5개" id="quantity" required/>
           </div>
           
           <div class='input-radio'>
-            <label for="quantity">재고: 충분</label>
+            <label for="quantity">재고:</label>
+            충분<input type='radio' name='stock' value='충분' checked required />
+            부족<input type='radio' name='stock' value='부족'/>
+            재고없음<input type='radio' name='stock' value='재고없음'/>
           </div>
           
           <div class ='input-radio'>
-            <label for="quantity">상태: 좋음</label>
+            <label for="quantity">상태:</label>
+            좋음<input type ='radio' name ='status'value ='좋음' checked required />
+            보통<input type ='radio'name ='status'value ='보통'/>
+            나쁨<input type ='radio'name ='status'value ='나쁨'/>
           </div>
 
-          <span><button type="button" onclick = "location.href='edit.html'">수정하기</button> <button type="button" onclick = "location.href='index.html'">취소</button></span>
+          <span><button type="button" onclick = "showConfirm()">수정하기</button> <button type="button" onclick = "location.href='index.html'">취소</button></span>
           </div>
         </div>
       </div>
+    
+    <footer class="container-fluid">
+      <p>실전프로젝트 과일가게</p>
+    </footer>
 
   </form>
   <script>
-    function addProduct() {
+    function showConfirm() {
   var name = document.getElementById('name').value;
   var price = document.getElementById('price').value;
   var quantity = document.getElementById('quantity').value;
@@ -79,7 +92,7 @@
 
   
  if(name && price && quantity && stock && status) { // 모든 필드가 입력되었는지 확인합니다.
-      alert("수정되었습니다");
+      confirm("수정하시겠습니까?");
  } else { // 필요한 정보 중 일부 또는 전체가 누락된 경우 사용자에게 알립니다.
       alert("모든 필드를 채워주세요.");
   }
