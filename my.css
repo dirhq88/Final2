@@ -22,3 +22,48 @@ footer {
   }
   .row.content {height: auto;} 
 }
+
+.input-text {
+  display: flex;
+  flex-direction: row;
+}
+
+.add {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* 중앙 정렬 */
+  justify-content: space-around; /* 각 요소 사이의 공간을 균등하게 분배 */
+}
+
+.add .input-text,
+.add .input-radio {
+    
+    margin-bottom: 20px; /* 각 입력 필드 아래에 마진을 추가합니다. 이 값도 필요에 따라 조정할 수 있습니다. */
+    font-size: larger; /* 폰트 크기를 키웁니다. 원하는 크기로 조절 가능합니다.*/
+}
+
+@media (max-width:767px) {
+
+  .add {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* 중앙 정렬 */
+    justify-content: space-around; /* 각 요소 사이의 공간을 균등하게 분배 */
+  }
+
+  .input-text,
+  .input-radio,
+  button {
+      font-size: medium;
+      width:50%;
+      margin-bottom :10px;
+  }
+
+  button {
+    width:90px;
+}
+}
+
+h2 {
+  margin-bottom: 10%;
+}
