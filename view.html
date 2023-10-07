@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./my.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+  <form action = "save_ok.php" name = "person" method = "post">
+
+    <div class="container-fluid">
+      <div class="row content">
+        <div class="col-sm-3 sidenav">
+          <ul class="nav nav-pills nav-stacked">
+            <li class="active"><a href="./index.html">오석 과일가게</a></li>
+            <li><a href="#">뉴턴 과일가게</a></li>
+            <li><a href="#section3">느헴 과일가게</a></li>
+            <li><a href="#section3">코너스톤 과일가게</a></li>
+          </ul><br>
+        </div>
+    
+        <div class="addList">
+          <h2>목록 추가하기</h2>
+          <div class="add">
+            <div class="input-text">
+              <label for="name">품명:</label><br/>
+              <input type="text" value = "사과" id="name" required/>
+          </div>
+          
+          <div class="input-text">
+              <label for="price">가격:</label><br/>
+              <input type="text" value = "10,000" id="price" required/>
+          </div>
+          
+          <div class="input-text">
+              <label for="quantity">수량:</label><br/>
+              <input type="text" value = "5개" id="quantity" required/>
+          </div>
+          
+          <div class='input-radio'>
+            <label for="quantity">재고:</label>
+            충분<input type='radio' name='stock' value='충분' checked required />
+            부족<input type='radio' name='stock' value='부족'/>
+            재고없음<input type='radio' name='stock' value='재고없음'/>
+          </div>
+          
+          <div class ='input-radio'>
+            <label for="quantity">상태:</label>
+            좋음<input type ='radio' name ='status'value ='좋음' checked required />
+            보통<input type ='radio'name ='status'value ='보통'/>
+            나쁨<input type ='radio'name ='status'value ='나쁨'/>
+          </div>
+
+          <span><button type="button" onclick = "addProduct()">수정하기</button> <button type="button" onclick = "location.href='index.html'">취소</button></span>
+          </div>
+        </div>
+      </div>
+    
+    <footer class="container-fluid">
+      <p>실전프로젝트 과일가게</p>
+    </footer>
+
+  </form>
+  <script>
+    function addProduct() {
+  var name = document.getElementById('name').value;
+  var price = document.getElementById('price').value;
+  var quantity = document.getElementById('quantity').value;
+
+  var stockElements = document.getElementsByName('stock');
+  var stock;
+  
+  for(var i=0; i<stockElements.length; i++) {
+      if(stockElements[i].checked) {
+          stock = stockElements[i].value;
+      }
+  }
+
+  var statusElements = document.getElementsByName('status');
+  
+  var status;
+  
+  for(var i=0; i<statusElements.length; i++) {
+      if(statusElements[i].checked) {
+          status = statusElements[i].value;
+      }
+  }
+
+  
+ if(name && price && quantity && stock && status) { // 모든 필드가 입력되었는지 확인합니다.
+      alert("수정되었습니다");
+ } else { // 필요한 정보 중 일부 또는 전체가 누락된 경우 사용자에게 알립니다.
+      alert("모든 필드를 채워주세요.");
+  }
+}
+  </script>
+</body>
+</html>

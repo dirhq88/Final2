@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en"> 
 <head>
-  <<title>Bootstrap Example</title>
+  <title>Bootstrap Example</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -16,10 +16,10 @@
       <div class="row content">
         <div class="col-sm-3 sidenav">
           <ul class="nav nav-pills nav-stacked">
-            <li class="active"><a href="./index.html">판매 목록</a></li>
-            <li><a href="./add.html">목록 추가하기</a></li>
-            <li><a href="#section3">목록 수정하기</a></li>
-            <li><a href="#section3">목록 삭제하기</a></li>
+            <li class="active"><a href="./index.html">오석 과일가게</a></li>
+            <li><a href="#">뉴턴 과일가게</a></li>
+            <li><a href="#section3">느헴 과일가게</a></li>
+            <li><a href="#section3">코너스톤 과일가게</a></li>
           </ul><br>
         </div>
     
@@ -29,41 +29,39 @@
             <div class="input-text">
               <label for="name">품명:</label><br/>
               <input type="text" id="name" required/>
-          </div>
-          
-          <div class="input-text">
-              <label for="price">가격:</label><br/>
-              <input type="text" id="price" required/>
-          </div>
-          
-          <div class="input-text">
-              <label for="quantity">수량:</label><br/>
-              <input type="text" id="quantity" required/>
-          </div>
-          
-          <div class='input-radio'>
-            <label for="quantity">재고:</label>
-            충분<input type='radio' name='stock' value='충분' required />
-            부족<input type='radio' name='stock' value='부족'/>
-            재고없음<input type='radio' name='stock' value='재고없음'/>
-          </div>
-          
-          <div class ='input-radio'>
-            <label for="quantity">상태:</label>
-            좋음<input type ='radio' name ='status'value ='좋음'required />
-            보통<input type ='radio'name ='status'value ='보통'/>
-            나쁨<input type ='radio'name ='status'value ='나쁨'/>
-          </div>
-          
-          
-          <button onclick = "addProduct()">추가하기</button>
+            </div>
+            
+            <div class="input-text">
+                <label for="price">가격:</label><br/>
+                <input type="text" id="price" required/>
+            </div>
+            
+            <div class="input-text">
+                <label for="quantity">수량:</label><br/>
+                <input type="text" id="quantity" required/>
+            </div>
+            
+            <div class='input-radio'>
+              <label for="quantity">재고:</label>
+              충분<input type='radio' name='stock' value='충분' required />
+              부족<input type='radio' name='stock' value='부족'/>
+              재고없음<input type='radio' name='stock' value='재고없음'/>
+            </div>
+            
+            <div class ='input-radio'>
+              <label for="quantity">상태:</label>
+              좋음<input type ='radio' name ='status'value ='좋음'required />
+              보통<input type ='radio'name ='status'value ='보통'/>
+              나쁨<input type ='radio'name ='status'value ='나쁨'/>
+            </div>
+            <span><button type="button" onclick = "addProduct()">추가하기</button> <button type="button" onclick = "location.href='index.html'">취소</button></span>
           </div>
         </div>
       </div>
     
-    <footer class="container-fluid">
+    <!-- <footer class="container-fluid">
       <p>실전프로젝트 과일가게</p>
-    </footer>
+    </footer> -->
 
   </form>
   <script>

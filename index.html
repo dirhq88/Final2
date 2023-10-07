@@ -19,7 +19,7 @@
             <li class="active"><a href="./index.html">오석 과일가게</a></li>
             <li><a href="#">뉴턴 과일가게</a></li>
             <li><a href="#section3">느헴 과일가게</a></li>
-            <li><a href="#section3">코너스콘 과일가게</a></li>
+            <li><a href="#section3">코너스톤 과일가게</a></li>
           </ul><br>
         </div>
     
@@ -44,7 +44,7 @@
                   <td>5개</td>
                   <td>충분</td>
                   <td>좋음</td>
-                  <td><button>✏️</button> <button>🗑️</button></td>
+                  <td><button type="button" onclick="location.href='view.html'">✏️</button> <button type="button" onclick= showConfirm() >🗑️</button></td>
                 </tr>
                 <tr>
                   <td>배</td>
@@ -52,7 +52,7 @@
                   <td>5개</td>
                   <td>충분</td>
                   <td>좋음</td>
-                  <td><button>✏️</button> <button>🗑️</button></td>
+                  <td><button type="button" onclick="location.href='view.html'">✏️</button> <button type="button" onclick= showConfirm()>🗑️</button></td>
                 </tr>
                 <tr>
                   <td>파인애플</td>
@@ -60,7 +60,7 @@
                   <td>1개</td>
                   <td>충분</td>
                   <td>좋음</td>
-                  <td><button>✏️</button> <button>🗑️</button></td>
+                  <td><button type="button" onclick="location.href='view.html'">✏️</button> <button type="button" onclick= showConfirm()>🗑️</button></td>
                 </tr>
                 <tr>
                   <td>샤인 머스캣</td>
@@ -68,7 +68,7 @@
                   <td>1송이</td>
                   <td>재고 없음</td>
                   <td>보통</td>
-                  <td><button>✏️</button> <button>🗑️</button></td>
+                  <td><button type="button" onclick="location.href='view.html'">✏️</button> <button type="button" onclick= showConfirm()>🗑️</button></td>
                 </tr>
                 <tr>
                   <td>방울 토마토</td>
@@ -76,7 +76,7 @@
                   <td>1박스(300g)</td>
                   <td>부족</td>
                   <td>보통</td>
-                  <td><button>✏️</button> <button>🗑️</button></td>
+                  <td><button type="button" onclick="location.href='view.html'">✏️</button> <button type="button" onclick= showConfirm()>🗑️</button></td>
                 </tr>
                 <tr>
                   <td>믹스 과일컵</td>
@@ -84,15 +84,22 @@
                   <td>1컵</td>
                   <td>부족</td>
                   <td>보통</td>
-                  <td><button>✏️</button> <button>🗑️</button></td>
+                  <td><button type="button" onclick="location.href='view.html'">✏️</button> <button type="button" onclick= showConfirm()>🗑️</button></td>
                 </tr>
               </tbody>
             </table>
-            <div class = "Button"><a href="./add.html"><button>add</button></a></div>
+            <div class = "Button"><button type="button" onclick="location.href='add.html'">add</button></div>
         </div>
       </div>
     </div>
     
   </form>
+
+  <script>
+    function showConfirm() {
+      confirm("삭제하시겠습니까?");
+    }
+  </script>
+
 </body>
 </html>

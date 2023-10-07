@@ -71,6 +71,7 @@ footer {
 h2 {
   margin-bottom: 5%;
   margin-top: 7%;
+  text-align: center;
 }
 
 li{
@@ -80,3 +81,4 @@ li{
 .Button{
   text-align: right;
 }
+
